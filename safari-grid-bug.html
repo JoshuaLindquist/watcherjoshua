@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Webkit Grid Bug</title>
+    <style>
+    div { margin: 0 auto; writing-mode: vertical-rl; }
+    body { display: grid; grid-template: auto / auto 1fr;}
+    </style>
+    </head>
+    <body>
+        <div>Left Column</div>
+        <span>Right Column</span>
+    </body>
+</html>

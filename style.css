@@ -64,9 +64,15 @@ main {
     }
 
     #logo {
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
         text-align: right;
+    }
+
+    @supports(display: grid) and (writing-mode: vertical-rl) {
+        #logo {
+            margin: 0;
+            transform: rotate(180deg);
+            writing-mode: vertical-rl;
+        }
     }
 
     #logo a span {
