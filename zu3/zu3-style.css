@@ -1,0 +1,166 @@
+/* Internal Note Styles */
+
+aside {
+    border: 1px inset #000;
+    color: #666;
+    font-weight: normal;
+    width: 50%;
+    margin: 7em auto;
+    padding: 1em;
+}
+
+/* End Internal Note Styles */
+
+main, nav, dt, h2, div#ad {
+    border: 1px inset #000;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+article {
+    border-bottom: 1px inset #000;
+}
+
+body {
+    display: grid;
+    font-size: small;
+    gap: 0px 5px;
+    grid-gap: 0px 5px;
+    grid-template: auto / repeat(6,1fr);
+    grid-template-areas: "masthead masthead masthead masthead masthead masthead" "primary-nav content content content content secondary-nav";
+}
+
+dd {
+    margin: 0;
+}
+
+dl {
+    margin: 3px;
+}
+
+dt, h2 {
+    background: #009;
+    color: #fff;
+    padding: 3px 0;
+    text-align: center;
+}
+
+dt:before, dt:after, h2:before, h2:after {
+    content: '::';
+}
+
+dt, p {
+    font-weight: bold;
+}
+
+form {
+    display: none;
+}
+
+h2 {
+    font-size: small;
+}
+
+header:first-of-type { 
+    grid-area: masthead; 
+}
+
+main {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    grid-area: content;
+    padding: 3px;
+    text-align: center;
+}
+
+nav {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav:first-of-type { 
+    grid-area: primary-nav; 
+}
+
+nav:first-of-type dd:before {
+    content: '>> ';
+}
+
+nav:last-of-type { 
+    grid-area: secondary-nav;
+    text-align: right;
+}
+
+nav:last-of-type dd:after {
+    content: ' <<';
+}
+
+#masthead {
+    border: 10px solid #009;
+    display: grid;
+    grid-template: auto / minmax(0,2fr) minmax(0,4fr) minmax(0,2fr);
+    grid-template-areas: "left-img logo right-img";
+    height: 200px;
+    white-space: nowrap;
+}
+
+#masthead a {
+    color: #009;
+    display: block;
+    flex: 1 0 auto;
+    font: bold 2em/1 Verdana, Arial, Helvetica, sans-serif;
+    padding-top: 1em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0px 0px 5px #BE79BA, 0px 0px 5px #BE79BA, 0px 0px 5px #BE79BA;
+}
+
+#masthead div#content {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#masthead div#left-img img {
+    object-position: 50% 25%;
+}
+
+#masthead div#right-img img {
+    object-position: 50% 0%;
+}
+
+#masthead h1 {
+    color: #009;
+    flex: 2 0 auto;
+    font: bold 5em/1 Verdana, Arial, Helvetica, sans-serif;
+    grid-area: logo;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    word-spacing: -.6ch;
+}
+
+#masthead h1:after {
+    bottom: 0;
+    color: #999;
+    content: 'Zelda Universe';
+    left: 1.5em;
+    left: 2ch;
+    position: absolute;
+    right: 0;
+    top: 2em;
+    transform: scaleY(-1) skew(-40deg, 0deg);
+}
+
+#masthead img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+#masthead #left-img {
+    grid-area: left-img;
+}
+
+#masthead #right-img {
+    grid-area: right-img;
+}
