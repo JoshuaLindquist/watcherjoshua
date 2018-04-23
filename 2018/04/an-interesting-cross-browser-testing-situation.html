@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <title>Watcher Joshua</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style.css">
+        <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id="logo">
+            <a href=""><span>Watcher</span> <span>Joshua</span></a>
+        </div>
+        <main>
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./articles.html">Articles</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./about.html">About Me</a></li>
+                </ul>
+            </nav>
+            <article class="post">
+                <header>
+                <h2>An interesting cross-browser testing situation</h2>
+                <time datetime="2018-04-19">April 19, 2018</time>
+                </header>
+                <p>Well, I had intended to spend just a little bit of time tonight fixing up the styles on the site. I left a lot of things very plain, and I thought I could pretty it up a bit. Instead, I was informed that the entire layout was broken in Safari. Fixing it was pretty easy, but <a href="https://medium.com/@alSkachkov/how-to-load-the-latest-webkit-on-windows-962a9219c1e1">setting up a local copy of Webkit on Windows</a> proved to be more complicated than I expected.</p>
+                <p>I also got a bit lost for a few hours while I broke down the problem. I ended up building a <a href="./safari-grid-bug.html">reduced test case</a> (it will only look broken if you are running a current Safari/Webkit). The error seems to be caused by a combination of an auto width grid track, <code>writing-mode</code>, and <code>margin: 0 auto;</code>.</p>
+                <p>It has been many years since I had to decipher a cross-browser rendering problem. It was much easier this time than it tended to be in the past. It was an interesting detour, but it means that playing with pretty things will have to wait for another time. My weekend is looking fairly busy, so I may not get back to it until next week.</p>
+            </article>
+                <hr>
+                <h3>About Me</h3>
+                <p>My name is Joshua Lindquist. I sometimes use the alias WatcherJoshua. By day, I am a graphic designer working in the sign and printing industry. By night, I am the content director of <a href="http://www.zeldauniverse.net">Zelda Universe</a>. I like to hang out on <a href="http://www.twitter.com/WatcherJoshua">Twitter</a>.</p>
+            </article>
+        </main>
+    </body>
+</html>
